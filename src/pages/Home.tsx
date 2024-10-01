@@ -1,18 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import SearchBar from "@/components/SearchBar"
 
 export default function Home(){
-  const [searchTerm, setSearchTerm] = useState("")
   const navigate = useNavigate();
 
-  function navigateSearch(){
-    navigate(`/search?searchTerm=${searchTerm}`);
+  function navigateSearch(searchTerm: string){
+    navigate(`/search/${searchTerm}`);
   }
   return (
-    <>
-    <p>Search:</p>
-    <input id="searchTerm" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
-    <button onClick={navigateSearch}>Go</button>
-    </>
+    <SearchBar callback={navigateSearch}/>
   )
 }

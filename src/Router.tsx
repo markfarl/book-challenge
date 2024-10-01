@@ -7,10 +7,19 @@ export default function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}>
-          <Route path="/search" element={<Search />} />
-          <Route path="/about" element={<Book />} />
-        </Route>
+        <Route
+          path="/"
+          element={<Home />}
+        />
+        <Route
+          path="/search/:searchTerm"
+          element={<Search />}
+        />
+        <Route
+          path="book/:id"
+          element={<Book />}
+        />
+         <Route path="/users/:userId" element={<Book />} />
       </Routes>
     </BrowserRouter>
   )
