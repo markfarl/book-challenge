@@ -12,7 +12,7 @@ export default function Router() {
           element={<Home />}
         />
         <Route
-          path="/search/:searchTerm"
+          path="/search/:searchTerm?/:page?/:limit?"
           element={<Search />}
         />
         <Route
