@@ -1,13 +1,10 @@
-import { useState } from "react"
 import { useSearchNav } from "@/contexts/SearchNavContext"
 import { CallbackSearchType } from "@/types/SearchResults"
 
 export default function SearchBar({ callback }: CallbackSearchType) {
   const { searchNavData, setSearchNavData } = useSearchNav()
-  const [searchTerm, setSearchTerm] = useState("")
 
   function setSearchAndContext(inputSearch: string): void {
-    setSearchTerm(inputSearch)
     setSearchNavData({
       ...searchNavData,
       searchTerm: inputSearch
