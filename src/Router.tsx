@@ -1,11 +1,11 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter , Routes, Route } from "react-router-dom";
 import Search from './pages/Search'
 import Book from './pages/Book'
 import Home from './pages/Home'
 
 export default function Router() {
   return (
-    <BrowserRouter basename="/book-challenge/">
+    <HashRouter>
       <Routes>
         <Route
           path="/"
@@ -21,6 +21,6 @@ export default function Router() {
         />
          <Route path="/users/:userId" element={<Book />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
