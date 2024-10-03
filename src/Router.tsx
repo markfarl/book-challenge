@@ -5,7 +5,7 @@ import Home from './pages/Home'
 
 export default function Router() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/book-challenge/">
       <Routes>
         <Route
           path="/"
