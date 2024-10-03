@@ -59,7 +59,7 @@ export default function Book() {
                 <h1>{bookDetails?.full_title || bookDetails?.title}</h1>
                 <h2>{bookDetails?.subtitle}</h2>
                 <p>Description:</p>
-                <p> {bookDetails?.description}</p>
+                <p> {bookDetails?.description?.value}</p>
               </div>
 
             </div>

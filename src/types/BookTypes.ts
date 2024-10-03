@@ -10,7 +10,9 @@ export interface BookType {
   title: string;
   subtitle: string;
   full_title: string;
-  description: string;
+  description: {
+    value: string
+  };
   works?: (AuthorsEntityOrLanguagesEntityOrWorksEntityOrType)[] | null;
   key: string;
   latest_revision: number;
