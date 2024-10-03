@@ -16,7 +16,7 @@ export default function Router() {
           element={<Search />}
         />
         <Route
-          path="book/:id"
+          path="book/:isbn"
           element={<Book />}
         />
          <Route path="/users/:userId" element={<Book />} />

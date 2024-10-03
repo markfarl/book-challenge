@@ -1,15 +1,5 @@
-import { createContext, SetStateAction, useContext, useState } from "react"
-
-export interface searchNavDataType {
-  searchTerm: string,
-  page: number,
-  limit: number,
-}
-
-type SearchNaVProviderType = {
-  searchNavData: searchNavDataType,
-  setSearchNavData: React.Dispatch<SetStateAction<searchNavDataType>>
-}
+import { SearchNaVProviderType } from "@/types/SearchResults";
+import { createContext, useContext, useState } from "react"
 
 const searchNavDefaults = {
   searchTerm: "",

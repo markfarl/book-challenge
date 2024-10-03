@@ -3,6 +3,10 @@ export type SearchFetch = {
   page?: number,
   limit?: number
 }
+export type BookFetch = {
+  isbn: string
+}
+
 export interface SearchFetchReturn {
   numFound: number;
   start: number;

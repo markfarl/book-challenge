@@ -2,18 +2,9 @@ import { useSearchNav } from "@/contexts/SearchNavContext"
 import { useNavigate } from "react-router-dom";
 import navigateSearch from "@/services/navigateSearch"
 import { useEffect, useState } from "react";
+import { PaginationType, PaginationValueType } from "@/types/SearchResults";
 
-type PaginationType = {
-  page: number,
-  limit: number,
-  total: number,
-  start: number,
-}
-type PaginationValueType = PaginationType & {
-  pages: number,
-  resultEnd: number,
-  pageNavArray: number[],
-}
+
 function getPagVals(props: PaginationType): PaginationValueType {
   const pages = Math.ceil(props.total / props.limit)
   const resultEnd = props.start + props.limit
